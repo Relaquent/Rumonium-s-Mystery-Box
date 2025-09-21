@@ -177,10 +177,6 @@
   <button id="go" class="rgb-btn mt-10 px-10 py-4 font-semibold text-lg backdrop-blur-md shadow-2xl">
     <span>Take Me There</span>
   </button>
-
-  <div id="loader" class="mt-6 opacity-0 transition-opacity duration-500 text-gray-200 font-medium">
-    Redirecting... hold tight.
-  </div>
 </main>
 
 <script>
@@ -267,58 +263,14 @@ const sites = [
   "https://hasthelargehadroncolliderdestroyedtheworldyet.com/",
   "https://alwaysjudgeabookbyitscover.com/",
   "https://www.muchbetterthanthis.com/",
-  "https://theendofreason.com/",
-  "https://www.random.org/",
-  "https://www.boredhumans.com/",
-  "https://www.corgiorgy.com/",
-  "https://www.trashloop.com/",
-  "https://www.essaytyper.com/",
-  "https://www.sanger.dk/",
-  "https://www.hopelesslifeboats.com/",
-  "https://www.longdogechallenge.com/",
-  "https://www.pointerpointer.com/",
-  "https://www.cat-bounce.com/",
-  "https://www.weavesilk.com/",
-  "https://www.windows93.net/",
-  "https://www.trypap.com/",
-  "https://zoomquilt.org/",
-  "https://www.boredbutton.com/",
-  "https://www.clicktoremove.com/",
-  "https://www.superbad.com/",
-  "https://chihuahuaspin.com/",
-  "https://unicodesnowmanforyou.com/",
-  "https://corndog.io/",
-  "https://pixelsfighting.com/",
-  "https://fallingfalling.com/",
-  "https://randomcolour.com/",
-  "https://ninjaflex.com/",
-  "https://cant-not-tweet-this.com/",
-  "https://eelslap.com/",
-  "https://www.everydayim.com/",
-  "https://burymewithmymoney.com/",
-  "https://procatinator.com/",
-  "https://www.rainymood.com/",
-  "https://beesbeesbees.com/",
-  "https://r33b.net/",
-  "https://chrismckenzie.com/",
-  "https://hasthelargehadroncolliderdestroyedtheworldyet.com/",
-  "https://alwaysjudgeabookbyitscover.com/",
-  "https://www.muchbetterthanthis.com/",
   "https://theendofreason.com/"
 ];
 
 const btn=document.getElementById('go');
-const loader=document.getElementById('loader');
 btn.addEventListener('click',()=>{
-  btn.disabled=true;
-  loader.classList.add('opacity-100');
-  btn.querySelector("span").textContent="⏳ Loading...";
-  setTimeout(()=>{
-    const url=sites[Math.floor(Math.random()*sites.length)];
-    window.location.href=url;
-  },1500);
+  const url=sites[Math.floor(Math.random()*sites.length)];
+  window.open(url, "_blank");
 });
 </script>
 </body>
 </html>
-
